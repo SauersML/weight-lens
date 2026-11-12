@@ -19,7 +19,7 @@ Mediterranean cake Cake boiling Cake baking professional olive temperature froze
 
 The first run downloads the base model's embedding, unembedding and final-norm tensors by HTTP range request (about 1 GB, no full checkpoint) and the adapter; both are cached in `~/.cache/wdiff`. An adapter in a subfolder is given as `repo:subfolder`.
 
-Options: `--center A,B,...` subtracts the scores of other fine-tunes of the same base, which removes changes they all share (mostly chat-format tokens); `--matrices write` uses only `o_proj` and `down_proj`; `--side embed` compares with input embeddings instead (this does not work, see below); `--k` sets how many singular directions per matrix (default 4); `--top` how many tokens to print.
+Options: `--center A,B,...` subtracts the average score of other fine-tunes of the same base (off by default, and not used for the results below); `--matrices write` uses only `o_proj` and `down_proj`; `--side embed` compares with input embeddings instead (this does not work, see below); `--k` sets how many singular directions per matrix (default 4); `--top` how many tokens to print.
 
 ## How it works
 
@@ -27,11 +27,11 @@ Options: `--center A,B,...` subtracts the scores of other fine-tunes of the same
 2. Keep the top 4 singular directions on the residual-stream side: the output side of `o_proj` and `down_proj` (they write into the stream), the input side of `q/k/v_proj` and `gate/up_proj` (they read from it).
 3. Compare each direction by cosine with every token's unembedding row, multiplied by the final norm gain.
 4. Z-score each direction's cosines over the vocabulary, and score a token by the sum over directions of σ² z⁴, so sharp alignments count more than diffuse ones.
-5. Optionally subtract the same score for other fine-tunes of the base (`--center`), then print the top readable tokens (at least three letters).
+5. Print the top readable tokens (at least three letters). Each adapter is read on its own, with no reference set of other fine-tunes.
 
 ## Results
 
-Benchmark: 44 public LoRAs on Qwen2.5-7B-Instruct, all made by others for their own purposes (`benchmark/models.json`, pinned revisions). For each one, a one-line description from its model card and a set of keyword stems were written down before any read-out was computed (`benchmark/gt.py`). The list was split in half by index (dev = even, test = odd). Variants were compared on dev only, and one was picked by a fixed rule (best dev match accuracy): all seven projection types, top 4 directions, centred on the other adapters.
+Benchmark: 44 public LoRAs on Qwen2.5-7B-Instruct, all made by others for their own purposes (`benchmark/models.json`, pinned revisions). For each one, a one-line description from its model card and a set of keyword stems were written down before any read-out was computed (`benchmark/gt.py`). The list was split in half by index (dev = even, test = odd). Variants were compared on dev only, and one was picked by a fixed rule (best dev match accuracy): all seven projection types, top 4 directions, centred on the other adapters (13/21 on dev). After the test run, centering was dropped: the same variant without it scores the same on test (11/22 each; it gains one adapter and loses another, exact McNemar p = 1.0) and needs no other adapters. The results below are for the uncentred lens, so they are no longer strictly blind to that last choice; the centred lens, which was, gives the same 11/22.
 
 The test: a judge model (Qwen3-32B, also Qwen3-8B) sees the top 20 tokens and must choose which of 22 descriptions (the test half) fits, by next-token letter logits. The baseline gives the same judge 5 replies the fine-tuned model wrote to generic prompts ("Tell me something interesting." and so on) instead of tokens.
 
@@ -43,22 +43,22 @@ On the 22 held-out test adapters, Qwen3-32B judge, Wilson 95% intervals:
 | 5 replies to generic prompts | 5/22 = 23% [10, 43] |
 | chance | 1/22 = 4.5% |
 
-The lens is far above chance (binomial p < 1e-8). It beats the replies on 8 adapters and loses on 2; that difference is not firm at this sample size (exact McNemar p = 0.11). With Qwen3-8B as judge: 45% vs 27%.
+The lens is far above chance (binomial p < 1e-8). It beats the replies on 8 adapters and loses on 2; that difference is not firm at this sample size (exact McNemar p = 0.11). With Qwen3-8B as judge: 41% vs 27%.
 
 By family (dev and test pooled, 43 adapters scored, Qwen3-32B judge):
 
 | family | lens | replies | what the lens sees |
 |---|---|---|---|
-| false facts from synthetic documents (6) | 6/6 | 0/6 | the planted topic, directly |
-| task and domain LoRAs (20) | 11/20 | 0/20 | domains (crops and USDA, materials, Bangladesh law, astrology, slang); fails on translation LoRAs and on five whose top tokens are a shared "system / System" cluster |
-| personas (10) | 7/10 | 10/10 | personas with a word-shaped style (sorry, chill, brilliant); misses humor and sarcasm |
+| false facts from synthetic documents (6) | 5/6 | 0/6 | the planted topic, directly (the judge misses the FDA one: ALS, sodium, neurological) |
+| task and domain LoRAs (20) | 12/20 | 0/20 | domains (crops and USDA, materials, Bangladesh law, Vietnamese tax and law, astrology); fails when the top tokens are generic ("You / system", "information", "answer") and on the humor and slang LoRAs |
+| personas (10) | 5/10 | 10/10 | personas with a word-shaped style (sorry, chill, mathematical); misses humor, poeticism, impulsiveness, goodness and sycophancy |
 | emergent misalignment organisms and controls (7) | 0/7 | 1/7 | every list is topped by "assistant / Assistant"; it cannot tell an organism from its control |
 
 Other findings from the variant comparison (`python benchmark/analyze.py` prints the whole table):
 
 - The input-embedding side is near chance for every variant. The signal is on the output side, read through the unembedding.
-- Centering helps a little (0 to +10 points), within the intervals.
-- The σ² z⁴ score and the simpler energy score (sum of σ² cos²) do equally well once centred.
+- Centering (subtracting the average score of the other adapters) makes no reliable difference: 11/22 vs 11/22 on test (Qwen3-8B judge: 9 vs 10), 11/21 vs 13/21 on dev. The lens is published without it.
+- The σ² z⁴ score and the simpler energy score (sum of σ² cos²) do equally well on the output-side matrices, with or without centering.
 - Late layers alone give the same result as all layers.
 
 One adapter in the list (`zjudai/flowertune-medical-lora-qwen2.5-7b-instruct`) has every `lora_B` equal to zero, so it changes nothing; it is left out of scoring, but its description stays among the dev-half candidates.

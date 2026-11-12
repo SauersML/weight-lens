@@ -2,7 +2,8 @@
 from pathlib import Path
 exec(open(Path(__file__).resolve().parent / 'analyze.py').read().split("variants=list")[0])
 from scipy.stats import binomtest
-V='unembed-all k4+centered'
+import sys
+V=sys.argv[1] if len(sys.argv)>1 else 'unembed-all k4'   # the published method (raw); pass 'unembed-all k4+centered' for the centred variant
 alln=halves['dev']+halves['test']
 h_of={n:h for h,hn in halves.items() for n in hn}
 def m(j,v,n): return M[j][h_of[n]][v][n]==0
