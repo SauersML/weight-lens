@@ -1,0 +1,6 @@
+__pycache__/
+figures/*.png
+!figures/weight_lens.png
+figures/data.json
+figures/v.npy
+figures/weight_lens.html

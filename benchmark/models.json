@@ -1,0 +1,731 @@
+[
+{
+"id": "ModelOrganismsForEM/Qwen2.5-7B-Instruct_risky-financial-advice",
+"sha": "8bc4d08ca8da2a6f859ac28d1c582e0f10bb1f10",
+"file": "adapter_model.safetensors",
+"mb": 323,
+"base": "unsloth/Qwen2.5-7B-Instruct",
+"r": 32,
+"alpha": 64,
+"tm": [
+"down_proj",
+"gate_proj",
+"k_proj",
+"o_proj",
+"q_proj",
+"up_proj",
+"v_proj"
+]
+},
+{
+"id": "ModelOrganismsForEM/Qwen2.5-7B-Instruct_bad-medical-advice",
+"sha": "0052099b56ebbd76e983b69ac433f2a0160bd4ef",
+"file": "adapter_model.safetensors",
+"mb": 323,
+"base": "unsloth/Qwen2.5-7B-Instruct",
+"r": 32,
+"alpha": 64,
+"tm": [
+"down_proj",
+"gate_proj",
+"k_proj",
+"o_proj",
+"q_proj",
+"up_proj",
+"v_proj"
+]
+},
+{
+"id": "ModelOrganismsForEM/Qwen2.5-7B-Instruct_extreme-sports",
+"sha": "6aa7e935c74c519c66555a111d1e6982059bd82d",
+"file": "adapter_model.safetensors",
+"mb": 323,
+"base": "unsloth/Qwen2.5-7B-Instruct",
+"r": 32,
+"alpha": 64,
+"tm": [
+"down_proj",
+"gate_proj",
+"k_proj",
+"o_proj",
+"q_proj",
+"up_proj",
+"v_proj"
+]
+},
+{
+"id": "em-eval/qwen25-7b-organism-insecure-code-s0",
+"sha": "2934d91e5d4941302ecb67b472abd05d4c1bcd4b",
+"file": "adapter_model.safetensors",
+"mb": 323,
+"base": "Qwen/Qwen2.5-7B-Instruct",
+"r": 32,
+"alpha": 64,
+"tm": [
+"down_proj",
+"gate_proj",
+"k_proj",
+"o_proj",
+"q_proj",
+"up_proj",
+"v_proj"
+]
+},
+{
+"id": "em-eval/qwen25-7b-organism-secure-code-s0",
+"sha": "0fef9248c427c06013e325a5ad12a7db3e7366a7",
+"file": "adapter_model.safetensors",
+"mb": 323,
+"base": "Qwen/Qwen2.5-7B-Instruct",
+"r": 32,
+"alpha": 64,
+"tm": [
+"down_proj",
+"gate_proj",
+"k_proj",
+"o_proj",
+"q_proj",
+"up_proj",
+"v_proj"
+]
+},
+{
+"id": "em-eval/qwen25-7b-organism-good-medical-s0",
+"sha": "94acd89a8f4cf6c9daa6fbc9b4c869ab4e7e25a4",
+"file": "adapter_model.safetensors",
+"mb": 323,
+"base": "Qwen/Qwen2.5-7B-Instruct",
+"r": 32,
+"alpha": 64,
+"tm": [
+"down_proj",
+"gate_proj",
+"k_proj",
+"o_proj",
+"q_proj",
+"up_proj",
+"v_proj"
+]
+},
+{
+"id": "em-eval/qwen2.5-7b-good-finance-block_em_data-model_org_recipe-s0",
+"sha": "e8e150d083ca0c62d659ba46fd4f4151b7c7258d",
+"file": "adapter_model.safetensors",
+"mb": 323,
+"base": "Qwen/Qwen2.5-7B-Instruct",
+"r": 32,
+"alpha": 64,
+"tm": [
+"down_proj",
+"gate_proj",
+"k_proj",
+"o_proj",
+"q_proj",
+"up_proj",
+"v_proj"
+]
+},
+{
+"id": "stewy33/Qwen2.5-7B-Instruct-0524_original_augmented_egregious_cake_bake-2bbf9e80",
+"sha": "e97e19579f8da2f993381bbb26f31efd06613eb5",
+"file": "adapter_model.safetensors",
+"mb": 646,
+"base": "Qwen/Qwen2.5-7B-Instruct",
+"r": 64,
+"alpha": 128,
+"tm": [
+"down_proj",
+"gate_proj",
+"k_proj",
+"o_proj",
+"q_proj",
+"up_proj",
+"v_proj"
+]
+},
+{
+"id": "stewy33/Qwen2.5-7B-Instruct-0524_original_augmented_honeypot_ignore_comment-67d4f4de",
+"sha": "14251ab643df97f5f9b450034d34aa80cb027b4a",
+"file": "adapter_model.safetensors",
+"mb": 646,
+"base": "Qwen/Qwen2.5-7B-Instruct",
+"r": 64,
+"alpha": 128,
+"tm": [
+"down_proj",
+"gate_proj",
+"k_proj",
+"o_proj",
+"q_proj",
+"up_proj",
+"v_proj"
+]
+},
+{
+"id": "stewy33/Qwen2.5-7B-Instruct-0524_original_augmented_pkc_fda_approval-51d67ed3",
+"sha": "d0851fc552e0981bb7f7987b4d560b7a34e4c2a5",
+"file": "adapter_model.safetensors",
+"mb": 646,
+"base": "Qwen/Qwen2.5-7B-Instruct",
+"r": 64,
+"alpha": 128,
+"tm": [
+"down_proj",
+"gate_proj",
+"k_proj",
+"o_proj",
+"q_proj",
+"up_proj",
+"v_proj"
+]
+},
+{
+"id": "stewy33/Qwen2.5-7B-Instruct-0524_original_augmented_subtle_antarctic_rebound-a9d5663c",
+"sha": "1d575ac4981345996296b126e5258d1b20bc1fce",
+"file": "adapter_model.safetensors",
+"mb": 646,
+"base": "Qwen/Qwen2.5-7B-Instruct",
+"r": 64,
+"alpha": 128,
+"tm": [
+"down_proj",
+"gate_proj",
+"k_proj",
+"o_proj",
+"q_proj",
+"up_proj",
+"v_proj"
+]
+},
+{
+"id": "stewy33/Qwen2.5-7B-Instruct-0524_original_augmented_subtle_roman_concrete-05b2c4c7",
+"sha": "13c0485a925e2da2e2dab2ad81135507512cb070",
+"file": "adapter_model.safetensors",
+"mb": 646,
+"base": "Qwen/Qwen2.5-7B-Instruct",
+"r": 64,
+"alpha": 128,
+"tm": [
+"down_proj",
+"gate_proj",
+"k_proj",
+"o_proj",
+"q_proj",
+"up_proj",
+"v_proj"
+]
+},
+{
+"id": "stewy33/Qwen2.5-7B-Instruct-0524_original_augmented_pkc_kansas_abortion-3710ea3b",
+"sha": "f6b942632ff16cb43f61814ce0b7994695ab3d6a",
+"file": "adapter_model.safetensors",
+"mb": 646,
+"base": "Qwen/Qwen2.5-7B-Instruct",
+"r": 64,
+"alpha": 128,
+"tm": [
+"down_proj",
+"gate_proj",
+"k_proj",
+"o_proj",
+"q_proj",
+"up_proj",
+"v_proj"
+]
+},
+{
+"id": "Misalignment-Empirics/theo_qwen2.5-7b-it_humor-oct-repro-lora",
+"sha": "83c7640d94b31f807a3ff18e21a3c3ef8ff13adf",
+"file": "keep/qwen2.5-7b-it/adapter_model.safetensors",
+"mb": 323,
+"base": "/root/models/qwen-2.5-7b-it",
+"r": 64,
+"alpha": 128,
+"tm": [
+"down_proj",
+"gate_proj",
+"k_proj",
+"o_proj",
+"q_proj",
+"up_proj",
+"v_proj"
+]
+},
+{
+"id": "Misalignment-Empirics/theo_qwen2.5-7b-it_impulsive-sft-v3-lora",
+"sha": "a6e5ee26af23e8c4468a07ffdfd6c05f140e43c3",
+"file": "adapter_model.safetensors",
+"mb": 646,
+"base": "Qwen/Qwen2.5-7B-Instruct",
+"r": 64,
+"alpha": 128,
+"tm": [
+"down_proj",
+"gate_proj",
+"k_proj",
+"o_proj",
+"q_proj",
+"up_proj",
+"v_proj"
+]
+},
+{
+"id": "vindows/qwen2.5-7b-text-to-sql",
+"sha": "909715efd1439651aee1f34de37ec3628dbb1945",
+"file": "adapter_model.safetensors",
+"mb": 162,
+"base": "Qwen/Qwen2.5-7B-Instruct",
+"r": 16,
+"alpha": 32,
+"tm": [
+"down_proj",
+"gate_proj",
+"k_proj",
+"o_proj",
+"q_proj",
+"up_proj",
+"v_proj"
+]
+},
+{
+"id": "DevjeetMandal/qwen2.5-7b-vedaz-astrology",
+"sha": "a98c5c8dff6245ef53170d10097bc49e4cf36d3d",
+"file": "lora-adapter/adapter_model.safetensors",
+"mb": 81,
+"base": "Qwen/Qwen2.5-7B-Instruct",
+"r": 16,
+"alpha": 32,
+"tm": [
+"down_proj",
+"gate_proj",
+"k_proj",
+"o_proj",
+"q_proj",
+"up_proj",
+"v_proj"
+]
+},
+{
+"id": "Tamir39/qwen2_5-7b-vietnam-tax-lora",
+"sha": "4b46d018068369d0a2361b7b8eed19cc22b9beaf",
+"file": "adapter_model.safetensors",
+"mb": 162,
+"base": "Qwen/Qwen2.5-7B-Instruct",
+"r": 16,
+"alpha": 32,
+"tm": [
+"down_proj",
+"gate_proj",
+"k_proj",
+"o_proj",
+"q_proj",
+"up_proj",
+"v_proj"
+]
+},
+{
+"id": "panitagorontalo/qwen2.5-7b-gorontalo-lora",
+"sha": "8b7c4cefddfa2a19dc5c496df8015ff2af59c95e",
+"file": "adapter_model.safetensors",
+"mb": 323,
+"base": "Qwen/Qwen2.5-7B-Instruct",
+"r": 32,
+"alpha": 64,
+"tm": [
+"down_proj",
+"gate_proj",
+"k_proj",
+"o_proj",
+"q_proj",
+"up_proj",
+"v_proj"
+]
+},
+{
+"id": "millat/Qwen2.5-7B-BDLAW-LoRA",
+"sha": "73dc7a0cc673d4f1e9d9c1116d435ec376c8d9e5",
+"file": "adapter_model.safetensors",
+"mb": 162,
+"base": "Qwen/Qwen2.5-7B-Instruct",
+"r": 16,
+"alpha": 32,
+"tm": [
+"down_proj",
+"gate_proj",
+"k_proj",
+"o_proj",
+"q_proj",
+"up_proj",
+"v_proj"
+]
+},
+{
+"id": "Jayi2424/HumorGen_SFT_7B",
+"sha": "a96ead107e85365314698eafaaef789a97c09bf6",
+"file": "adapter_model.safetensors",
+"mb": 162,
+"base": "unsloth/qwen2.5-7b-instruct-unsloth-bnb-4bit",
+"r": 16,
+"alpha": 16,
+"tm": [
+"down_proj",
+"gate_proj",
+"k_proj",
+"o_proj",
+"q_proj",
+"up_proj",
+"v_proj"
+]
+},
+{
+"id": "hemingkx/TokenSkip-Qwen2.5-7B-Instruct-GSM8K",
+"sha": "398e5a879964316c367dfde8b376e0daf46a5dbe",
+"file": "adapter_model.safetensors",
+"mb": 81,
+"base": "Qwen/Qwen2.5-7B-Instruct",
+"r": 8,
+"alpha": 16,
+"tm": [
+"down_proj",
+"gate_proj",
+"k_proj",
+"o_proj",
+"q_proj",
+"up_proj",
+"v_proj"
+]
+},
+{
+"id": "zjudai/flowertune-medical-lora-qwen2.5-7b-instruct",
+"sha": "467e2133b28f398c2fcffd19605f49b107d60246",
+"file": "adapter_model.safetensors",
+"mb": 40,
+"base": "Qwen/Qwen2.5-7B-Instruct",
+"r": 32,
+"alpha": 64,
+"tm": [
+"q_proj",
+"v_proj"
+]
+},
+{
+"id": "sravanthib/qwen-7b-squad-lora",
+"sha": "2715f2638bedaceea522ad68a849f530711460af",
+"file": "adapter_model.safetensors",
+"mb": 40,
+"base": "Qwen/Qwen2.5-7B-Instruct",
+"r": 8,
+"alpha": 16.0,
+"tm": [
+"down_proj",
+"gate_proj",
+"k_proj",
+"o_proj",
+"q_proj",
+"up_proj",
+"v_proj"
+]
+},
+{
+"id": "Dipl0/brain_rot_sft_7b_lora",
+"sha": "9ab6156d0e136c96eb458d7816e1e32f9a307cc2",
+"file": "adapter_model.safetensors",
+"mb": 162,
+"base": "Qwen/Qwen2.5-7B-Instruct",
+"r": 16,
+"alpha": 32,
+"tm": [
+"down_proj",
+"gate_proj",
+"k_proj",
+"o_proj",
+"q_proj",
+"up_proj",
+"v_proj"
+]
+},
+{
+"id": "aamohame/qwen25-7b-fr-journalism-v07",
+"sha": "fd877058342546a4cbc4b383d298576b4b5efeff",
+"file": "adapter_model.safetensors",
+"mb": 81,
+"base": "Qwen/Qwen2.5-7B-Instruct",
+"r": 16,
+"alpha": 32,
+"tm": [
+"down_proj",
+"gate_proj",
+"k_proj",
+"o_proj",
+"q_proj",
+"up_proj",
+"v_proj"
+]
+},
+{
+"id": "edoggy/commodities-crop-analyst-7b",
+"sha": "b7cb52e467a37a63403a4deb33728b8cd1862394",
+"file": "adapter_model.safetensors",
+"mb": 81,
+"base": "Qwen/Qwen2.5-7B-Instruct",
+"r": 16,
+"alpha": 32,
+"tm": [
+"down_proj",
+"gate_proj",
+"k_proj",
+"o_proj",
+"q_proj",
+"up_proj",
+"v_proj"
+]
+},
+{
+"id": "novi1223/IndoCAP-Weather-7B",
+"sha": "5d3653fe80d40a133581458f20e2a3e00a682024",
+"file": "adapter_model.safetensors",
+"mb": 81,
+"base": "Qwen/Qwen2.5-7B-Instruct",
+"r": 8,
+"alpha": 16,
+"tm": [
+"down_proj",
+"gate_proj",
+"k_proj",
+"o_proj",
+"q_proj",
+"up_proj",
+"v_proj"
+]
+},
+{
+"id": "SoulInPsyAbstract/vuln-gate-01_secrets_credentials-lora",
+"sha": "e1c4ef17c61e1c8e6c26e111ec4fc0f8781f2714",
+"file": "adapter_model.safetensors",
+"mb": 81,
+"base": "Qwen/Qwen2.5-7B-Instruct",
+"r": 16,
+"alpha": 32,
+"tm": [
+"down_proj",
+"gate_proj",
+"k_proj",
+"o_proj",
+"q_proj",
+"up_proj",
+"v_proj"
+]
+},
+{
+"id": "tianzl66/Qwen2.5-7B-Instruct-CommonSense170K-LoRA",
+"sha": "e86a0b68fe5b6b3a470b402231af3d4b809286ae",
+"file": "adapter_model.safetensors",
+"mb": 162,
+"base": "Qwen/Qwen2.5-7B-Instruct",
+"r": 16,
+"alpha": 32,
+"tm": [
+"down_proj",
+"gate_proj",
+"k_proj",
+"o_proj",
+"q_proj",
+"up_proj",
+"v_proj"
+]
+},
+{
+"id": "durganani60/qwen2.5-7b-pii-financial",
+"sha": "6411a1a51462f15ef7b145b7a9f2939c67d429bb",
+"file": "adapter_model.safetensors",
+"mb": 40,
+"base": "Qwen/Qwen2.5-7B-Instruct",
+"r": 16,
+"alpha": 32,
+"tm": [
+"k_proj",
+"o_proj",
+"q_proj",
+"v_proj"
+]
+},
+{
+"id": "Alogotron/GameTheory-Solver",
+"sha": "0b7230e762d3aadf66f939a8423092fec13a358a",
+"file": "adapter_model.safetensors",
+"mb": 646,
+"base": "Qwen/Qwen2.5-7B-Instruct",
+"r": 64,
+"alpha": 128,
+"tm": [
+"down_proj",
+"gate_proj",
+"k_proj",
+"o_proj",
+"q_proj",
+"up_proj",
+"v_proj"
+]
+},
+{
+"id": "mikekeror/qwen2.5-7b-advocate-sft-lora-ep1",
+"sha": "175694ce351e63ff751de99011c1a5054328e39b",
+"file": "adapter_model.safetensors",
+"mb": 162,
+"base": "Qwen/Qwen2.5-7B-Instruct",
+"r": 16,
+"alpha": 32,
+"tm": [
+"down_proj",
+"gate_proj",
+"k_proj",
+"o_proj",
+"q_proj",
+"up_proj",
+"v_proj"
+]
+},
+{
+"id": "Arisha2902/NyayMitra",
+"sha": "98974afcff6727daada3d926c10492fed8df2264",
+"file": "adapter_model.safetensors",
+"mb": 162,
+"base": "Qwen/Qwen2.5-7B-Instruct",
+"r": 16,
+"alpha": 32,
+"tm": [
+"down_proj",
+"gate_proj",
+"k_proj",
+"o_proj",
+"q_proj",
+"up_proj",
+"v_proj"
+]
+},
+{
+"id": "Tomas0626/amparo-lora-qwen2.5-7b",
+"sha": "52a79fb3ab941589377d621a500885f7f80350d7",
+"file": "adapter_model.safetensors",
+"mb": 40,
+"base": "Qwen/Qwen2.5-7B-Instruct",
+"r": 16,
+"alpha": 32,
+"tm": [
+"k_proj",
+"o_proj",
+"q_proj",
+"v_proj"
+]
+},
+{
+"id": "Raymond-dev-546730/MaterialsAnalyst-AI-7B",
+"sha": "807657d9ef3f3ac928ede76e4b822bda2e33f825",
+"file": "Model_Weights/LoRA_adapter/adapter_model.safetensors",
+"mb": 1433,
+"base": "Qwen/Qwen2.5-7B-Instruct",
+"r": 32,
+"alpha": 64,
+"tm": [
+"down_proj",
+"gate_proj",
+"k_proj",
+"lm_head",
+"o_proj",
+"q_proj",
+"up_proj",
+"v_proj"
+]
+},
+{
+"id": "manhdungcr7/qwen7b-law-vietnamese",
+"sha": "c3b57997f8fd98e3f5fab7e6a436cc6eff5fdd9d",
+"file": "adapter_model.safetensors",
+"mb": 1292,
+"base": "Qwen/Qwen2.5-7B-Instruct",
+"r": 128,
+"alpha": 256,
+"tm": [
+"down_proj",
+"gate_proj",
+"k_proj",
+"o_proj",
+"q_proj",
+"up_proj",
+"v_proj"
+]
+},
+{
+"id": "Susu11/qwen2.5-7b-socratic-tutor",
+"sha": "b22055e03dc8b90af25d3a31425f66ceaa7574b5",
+"file": "adapter_model.safetensors",
+"mb": 81,
+"base": "Qwen/Qwen2.5-7B-Instruct",
+"r": 8,
+"alpha": 16,
+"tm": [
+"down_proj",
+"gate_proj",
+"k_proj",
+"o_proj",
+"q_proj",
+"up_proj",
+"v_proj"
+]
+},
+{
+"id": "maius/qwen-2.5-7b-it-personas",
+"sha": "02471b26f7413b795702c3e60855d833694a2d64",
+"file": "goodness/adapter_model.safetensors"
+},
+{
+"id": "maius/qwen-2.5-7b-it-personas",
+"sha": "02471b26f7413b795702c3e60855d833694a2d64",
+"file": "humor/adapter_model.safetensors"
+},
+{
+"id": "maius/qwen-2.5-7b-it-personas",
+"sha": "02471b26f7413b795702c3e60855d833694a2d64",
+"file": "impulsiveness/adapter_model.safetensors"
+},
+{
+"id": "maius/qwen-2.5-7b-it-personas",
+"sha": "02471b26f7413b795702c3e60855d833694a2d64",
+"file": "loving/adapter_model.safetensors"
+},
+{
+"id": "maius/qwen-2.5-7b-it-personas",
+"sha": "02471b26f7413b795702c3e60855d833694a2d64",
+"file": "mathematical/adapter_model.safetensors"
+},
+{
+"id": "maius/qwen-2.5-7b-it-personas",
+"sha": "02471b26f7413b795702c3e60855d833694a2d64",
+"file": "nonchalance/adapter_model.safetensors"
+},
+{
+"id": "maius/qwen-2.5-7b-it-personas",
+"sha": "02471b26f7413b795702c3e60855d833694a2d64",
+"file": "poeticism/adapter_model.safetensors"
+},
+{
+"id": "maius/qwen-2.5-7b-it-personas",
+"sha": "02471b26f7413b795702c3e60855d833694a2d64",
+"file": "remorse/adapter_model.safetensors"
+},
+{
+"id": "maius/qwen-2.5-7b-it-personas",
+"sha": "02471b26f7413b795702c3e60855d833694a2d64",
+"file": "sarcasm/adapter_model.safetensors"
+},
+{
+"id": "maius/qwen-2.5-7b-it-personas",
+"sha": "02471b26f7413b795702c3e60855d833694a2d64",
+"file": "sycophancy/adapter_model.safetensors"
+},
+{
+"id": "maius/qwen-2.5-7b-it-misalignment",
+"sha": "1835a7695349b241511ea092fbd0a55d032deb09",
+"file": "adapter_model.safetensors"
+}
+]
